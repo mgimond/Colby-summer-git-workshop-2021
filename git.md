@@ -2,6 +2,8 @@
 title: Git
 ---
 
+# Git
+
 Git can be run in command line (Bash) environment or in a GUI environment. This workship will work exclusively in the command environment.
 
 Bring up the git shell (this may be listed as the **Git Bash** application on **Windows** and it may be accessed via your **Terminal** application on the **Mac**). 
