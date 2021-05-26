@@ -1,13 +1,14 @@
 # Intro to Git and Github
 
+
 ## Installing Git
 
 * For **Windows**, Git can be installed from https://gitforwindows.org/. Go with the default installation  options. 
 * For **Macs**, Git can be installed from  http://git-scm.com/downloads. Go with the default installation options. 
 
-> Note 1:  that the installers may install both a GUI and a Bash Git environment. This workshop will work exclusively in the Bash environment.
+> Note 1: The  installers may install both a GUI and a Bash Git environment. This workshop will work exclusively in the Bash environment.
 
-> Note 2: Some students have experienced issues installing Git on their Macs. A workaround that seems to work can be found [here](git_mac_issues.md).
+> Note 2: Some students have experienced issues installing Git on their Macs. A workaround that seems to work can be found [here](git_mac_issue.md).
 
 ## Creating a GitHub account
 
