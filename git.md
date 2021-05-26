@@ -1,4 +1,6 @@
-# Git
+---
+title: Git
+---
 
 Git can be run in command line (Bash) environment or in a GUI environment. This workship will work exclusively in the command environment.
 
