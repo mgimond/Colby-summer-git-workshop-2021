@@ -1,6 +1,4 @@
----
-title: Intro to Git and Github
----
+# Intro to Git and Github
 
 ## Installing Git
 
