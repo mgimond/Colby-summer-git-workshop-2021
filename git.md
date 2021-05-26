@@ -1,7 +1,3 @@
----
-title: Git
----
-
 # Git
 
 Git can be run in command line (Bash) environment or in a GUI environment. This workship will work exclusively in the command environment.
@@ -31,5 +27,44 @@ You should see something like:
 user.name=jdcolby
 user.email=jdcolby.com
 </pre>
+
+Note that all Git operations start with the `git` command.
+
+## Create a new project folder
+
+A Git repository (**repo**  for short) usually consists of project folder. You can create a Git repo in an existing project folder, or from a newly created folder. In this exercise, you'll create a new empty folder that you'll call `proj1`.  You can do this in a file manager window, or via the Bash command line. In this working example, we'll use Bash to create the folder under the user's home directory.
+
+```bash
+$ mkdir proj1
+```
+Next, we'll jump into the project folder using the `cd` (change directory) command.
+
+```bash
+$ cd proj1
+```
+In Bash, you can check the contents of a folder using the `ls` function. We'll add the `-a` option to list any hidden files and/or folder.
+
+```bash
+$ ls -a
+```
+Given that this is  a newly created  folder, you should only see a few dots
+
+```html
+. ..
+```
+
+##  Creating a new git repo
+
+Now that we have a project folder, we can create a new git repo in it. 
+
+```bash
+$ git init
+```
+
+If the project folder is empty, Git will return the following message:
+
+```html
+Initialized empty Git repository in C:/Users/jdcolby/proj1/.git/
+```
 
 More to come ...
