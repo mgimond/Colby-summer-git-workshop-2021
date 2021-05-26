@@ -31,3 +31,5 @@ You should see something like:
 user.name=jdcolby
 user.email=jdcolby.com
 </pre>
+
+More to come ...
