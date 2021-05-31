@@ -29,7 +29,8 @@ GitHub is a web hosted service  used to store and maintain code based projects. 
 ### Morning session
 
 * [Intro to Git](git.html)
-* [Linking GitHub with a local repo](git_and_github.html)
+* [Linking GitHub to  a local repo and vice versa ](github_setup.html)
+* [Syncing  GitHub with  a local repo ](git_and_github.html)
 
 ### Afternoon session
 
