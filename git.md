@@ -26,17 +26,20 @@ To check your settings, type:
 ```bash
 $ git config --global --list
 ```
+
 You should see something like:
+
 <pre>
 user.name=jdcolby
 user.email=jdcolby.com
 </pre>
+
 Note that all Git operations start with the `git` command.
 
 We will also take the opportunity to  change the default name of the main branch from `master`  to `main`. Doing so will parallels GitHub's  adoption of `main` following the [Open Compute Project's Inclusion and Openness guidelines](https://www.opencompute.org/documents/ocp-terminology-guidelines-for-inclusion-and-openness).
 
 ```bash
-git config --global init.defaultBranch main
+$ git config --global init.defaultBranch main
 ```
 
 ## Create a new project folder
@@ -46,16 +49,19 @@ A Git repository (**repo**  for short) usually consists of project folder. You c
 ```bash
 $ mkdir proj1
 ```
+
 Next, we'll jump into the project folder using the `cd` (change directory) command.
 
 ```bash
 $ cd proj1
 ```
+
 In Bash, you can check the contents of a folder using the `ls` function. We'll add the `-a` option to list any hidden files and/or folder.
 
 ```bash
 $ ls -a
 ```
+
 Given that this is  a newly created  folder, you should only see a few dots
 
 ```html
@@ -75,6 +81,7 @@ If the project folder is empty, Git will return the following message:
 ```html
 Initialized empty Git repository in C:/Users/jdcolby/proj1/.git/
 ```
+
 Now lets check the folder's content. Don't forget to add the `-a` option to list hidden folders/files.
 
 ```bash
@@ -119,6 +126,7 @@ One of the most frequently used Git commands in a Git session is `status`. This 
 ```bash
 $ git status
 ```
+
 You should see the following output.
 
 ```
@@ -156,6 +164,7 @@ Now let's check the status:
 ```bash
 $ git status
 ```
+
 ```
 On branch main
 
@@ -171,17 +180,18 @@ The message indicates that the `fruits.txt` file  has been staged but has not ye
 
 
 ### Other `add` options
+
 * If you have more than one item to stage, you can add these items on the same line separated by a space, e.g.:
 
-    ```bash
-$ git add fruits.txt file2.txt file3.txt ...
-    ```
+  ```bash
+  $ git add fruits.txt file2.txt file3.txt ...
+  ```
 
 * If you want to include *all* files and folders in your current project folder in the staging area, simply use the `-all` option:
 
-     ```bash
-     $ git add --all
-     ```
+  ```bash
+  $ git add --all
+  ```
 
 ### Commit: `commit`
 
@@ -206,10 +216,12 @@ Now check the status once again:
 ```bash
 $ git status
 ```
+
 ```
 On branch main
 nothing to commit, working tree clean
 ```
+
 The above message indicates that Git has a snapshot of the most recent state of your project folder.
 
 ## Creating a second snapshot of your repo
@@ -223,6 +235,7 @@ apple
 pear
 orange
 ```
+
 Save and close the text file.
 
 Now check the status of your repo.
@@ -267,7 +280,7 @@ $ git commit -am fruits.txt
 To view all snapshots in a Git repo, use the log function.
 
 ```bash
-git log
+$ git log
 ```
 
 ```
@@ -467,7 +480,9 @@ Our `HEAD` is now at the desired commit. Before we make any changes to this curr
 ```bash
 $ git switch -c sweets
 ```
+
 Let's rerun the log command.
+
 ```bash
 $ git log --oneline -all
 ```
@@ -477,6 +492,7 @@ c3478ed (main) added veggies list
 78c929e (HEAD -> sweets) addded orange
 246dd78 initial commit
 ```
+
 You should now see `HEAD` attached to the new branch named `sweets`.
 Next, add a `desserts.txt` file and populate it with the following list of desserts.
 
@@ -492,6 +508,7 @@ Next, stage and commit the changes.
 $ git add desserts.txt
 $ git commit -m "added desserts list"
 ```
+
 Now check the log.
 
 ```bash
@@ -720,7 +737,7 @@ The message from this merge differs from the previous merge performed in this tu
 Now check the log. We'll add the `--graph` option to view branch paths.
 
 ```bash
-git log --oneline --all --graph
+$ git log --oneline --all --graph
 ```
 
 ```
