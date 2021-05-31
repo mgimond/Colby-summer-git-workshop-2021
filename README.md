@@ -1,4 +1,4 @@
-# Intro to Git and Github
+# Intro to Git and GitHub
 
 
 ## Installing Git
@@ -16,22 +16,22 @@ If you do not have a GitHub account already created, do so by pointing your brow
 
 ## What is Git
 
-Git is a locally installed application used to keep track of changes made to a folder/files. In its simplest use,  it allows you to create versions of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called *branches*) whereby you chose to explore what/if scenarios in a an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is a part of a family of software applications calles *versuion control systems*.
+Git is a locally installed application used to keep track of changes made to a project folder. In its simplest use,  it allows you to create snapshot of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called *branches*) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called *version control systems*.
 
 Git is available in both a GUI and a command line environment.
 
 ## What is GitHub
 
-GitHub is a web hosted service  used to store and maintain code based projects. While its a compltely separate envirnment from Git (Git and GitHub are developed and maintained by separate entities), they are often used together in a typical workflow: You use git on your computer to track changes in a project folder, then use GitHub to host and share you project across the web.
+GitHub is a web hosted service  used to store and maintain code based projects. While it's a completely separate environment from Git (Git and GitHub are developed and maintained by separate entities), they are often used together in a typical workflow: You use git on your computer to track changes in a project folder, then use GitHub to host and share you project across the web.
 
 ## What will this workshop cover
 
 ### Morning session
 
-* [Intro to Git](git.md)
-* [Intro to GitHub](github)
+* [Intro to Git](git.html)
+* [Linking GitHub with a local repo](git_and_github.md)
 
 ### Afternoon session
 
-* [GitHub for the Classroom](github_classroom.md)
+* [GitHub for the Classroom](github_classroom.html)
 
