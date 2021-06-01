@@ -4,11 +4,13 @@
 
 -----
 
+
+
 Git can be run in command line (Bash) environment or in a GUI environment. This workshop will work exclusively in the command environment.
 
 Bring up the git shell (this may be listed as the **Git Bash** application on **Windows** and it may be accessed via your **Terminal** application on the **Mac**). 
 
-<img src="img/image-20210526102426954.png" alt="image-20210526102426954" style="zoom: 50%;" />
+<img src="img/image-20210526102426954.png" alt="image-20210526102426954" style="max-width: 60%;" />
 
 ## Configure your global Git environment
 
@@ -62,7 +64,7 @@ Given that this is  a newly created  folder, you should only see a few dots
 . ..
 ```
 
-##  Creating a new git repo
+##  Create a new git repo
 
 Now that we have a project folder, we can create a new git repo in it. 
 
@@ -81,13 +83,13 @@ Now lets check the folder's content. Don't forget to add the `-a` option to list
 $ ls -a
 ```
 
-You should now see `.git` added to the folder. The dot `.` in front of its name indicates that it's a *hidden" file.
+You should now see `.git` added to the folder. The dot `.` in front of its name indicates that it's a *hidden* file.
 
 ```bash
 .  ..  .git
 ```
 
-We'll add another option to `ls` to differentiate files from folders.
+We'll add another option to `ls` to differentiate files from folders. (In some Bash terminals, this may be the default `ls` setting).
 
 ```bash
 $ ls -aF
@@ -97,11 +99,11 @@ $ ls -aF
 ./  ../  .git/
 ```
 
-`.git` is a hidden folder. This is the  guts of this folder's git repo. If you were to remove this folder, you would lose all tracked changes to the current project folder, so this  folder you should not be touched!
+`.git/` is a hidden *folder*. This folder is the  guts of this repo's versioning ecosystem. If you were to remove this folder, you would lose all tracked changes to the current project folder, so this  folder should not be touched!
 
-## Create a new file
+## Add a new file to your repo
 
-Next, you'll create a new file called `fruits.txt`  in the `proj1` folder.  Feel free to use any plain text editor using a GUI (such as *TextEdit* on Macs, or *Notepad* on Windows) or a command line application such as *vim* or *nano*.
+Next, you'll create a new file called `fruits.txt`  in the `proj1` folder.  Feel free to use any plain text editor in a GUI (such as *TextEdit* on Macs, or *Notepad* on Windows) or in a command line application such as *vim* or *nano*.
 
 In this newly created file, add the following text (make sure that each word is placed on its own line, i.e. use a carriage return).
 
@@ -112,7 +114,7 @@ pear
 
 Save, then close the file.
 
-## Checking the state of your repo  using `status`
+## Check the state of your repo:  `status`
 
 One of the most frequently used Git commands in a Git session is `status`. This command will identify what files/folders have been modified or created since the last saved state of the repo. 
 
@@ -135,11 +137,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 The above message indicates that git recognizes that a new file was created. But it has not been *committed*  to a snapshot.
 
-## Creating a snapshot of your project folder: `add` and `commit`
+## Create a snapshot of your repo: `add` and `commit`
 
 If at any point in your project's development you wish to create a snapshot of your project folder, you will make use of Git's `add` and `commit` functions. Both functions serve different purposes but are more often than not used together when creating snapshots. In its basic use, `add` identifies which files and/or folders are to be stored in a snapshot and `commit` grabs the staged elements  and *commits* those elements to a snapshot that is identified using a timestamp and a unique *hash* identifier.
-
-
 
 ### Stage: `add`
 
@@ -170,14 +170,14 @@ Changes to be committed:
 The message indicates that the `fruits.txt` file  has been staged but has not yet been committed to a snapshot.
 
 
-### Other `add` options
+####  Other `add` options
 * If you have more than one item to stage, you can add these items on the same line separated by a space, e.g.:
 
     ```bash
 $ git add fruits.txt file2.txt file3.txt ...
     ```
 
-* If you want to include *all* files and folders in your current project folder in the staging area, simply use the `-all` option:
+* If you want to include *all* files and folders in your current project folder in the staging area, simply use the `--all` option:
 
      ```bash
      $ git add --all
@@ -212,7 +212,7 @@ nothing to commit, working tree clean
 ```
 The above message indicates that Git has a snapshot of the most recent state of your project folder.
 
-## Creating a second snapshot of your repo
+## Create a second snapshot of your repo
 
 Next, you will make changes to the `fruits.txt` file, then create a snapshot of this project folder's modified state.
 
@@ -241,7 +241,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Git recognizes that the content's of `fruits.txt` has changed since the last snapshot.
+Git recognizes that the contents of `fruits.txt` has changed since the last snapshot.
 
 Next, you will create a second snapshot of the project folder.
 
@@ -250,19 +250,19 @@ $ git add fruits.txt
 $ git commit -m "added orange"
 ```
 
-At this point, you've commit two snapshots of your current repo. Next, you will learn how to list the different snapshots in your Git repo.
+At this point, you've committed two snapshots of your current repo. Next, you will learn how to list the different snapshots in your Git repo.
 
 ### Alternative commit option
 
 If you are committing an update to an existing file, you can bypass the `git add ...` step and simply add the `-a` option to the `git commit ...` command:
 
 ```bash
-$ git commit -am fruits.txt
+$ git commit -am "added orange"
 ```
 
 
 
-## Using `log` to list snapshots.
+## List existing snapshots : `log`
 
 To view all snapshots in a Git repo, use the log function.
 
@@ -285,9 +285,9 @@ Date:   Fri May 28 08:40:36 2021 -0400
 
 ```
 
-You should see the two snapshots listed in descending chronological order. Each commit lists the author and timestamp associated with the commit (the author and email address are those you defined a the beginning of this tutorial). You'll also see the comment you added to each commit. Note that properly commented commits are important to help identify the different snapshots.
+You should see the two snapshots listed in descending chronological order. Each commit lists the author and timestamp associated with the commit (the author and email address are those you defined at the beginning of this tutorial). You'll also see the comment you added to each commit. Note that properly commented commits are important to help identify the different snapshots.
 
-## Making a few more changes to our repository
+## Make a few more changes to the repo
 
 To make this exercise a bit more interesting, we'll create a new file called `veggies.txt` and populate its content with the following text:
 
@@ -334,9 +334,7 @@ Date:   Fri May 28 08:40:36 2021 -0400
 
 
 
-
-
-We now have three commits. How often you chose to commit a snapshot of your project is up to you. But it's usually good practice to grab snapshots at key developments in your work. 
+We now have three commits. How often you chose to commit a snapshot of your project is up to you. But it's usually good practice to grab snapshots at key development stages of your work. 
 
 It's not uncommon to end up with scores if not hundreds of commits. This makes navigating through the logs challenging. An alternative is to reduce each commit to  a single line in the log output. This can be done with the `--oneline` option.
 
@@ -353,9 +351,11 @@ c3478ed (HEAD -> main) added veggies list
 
 Note that not only has each commit been reduced to  as single line, but the 40 character hash string used to identify each commit has been reduced to just 7 characters. For example, the initial commit's hash string of `246dd78d4c151e68df76e298528befd8c7aff091` is now reduced to `246dd78`. (Recall that your hash strings will differ from those shown in this tutorial).
 
-## Reverting to an earlier state of a repo
+![image-20210531134228858](img_classroom/image-20210531134228858.png)
 
-Now that you  have a snapshots to work with, you will learn how to revert back to an earlier *state* in your project.
+## Revert back to an earlier state of a repo: `checkout`
+
+Now that you  have snapshots to work with, you will learn how to revert back to an earlier *state* of your project.
 
 Let's review the list of commits.
 
@@ -369,19 +369,19 @@ c3478ed (HEAD -> main) added veggies list
 246dd78 initial commit
 ```
 
-
-
 If you want to revert back to the project's state before you added the `veggies.txt` file, you will first need to note the hash string associated with that commit.  In this working example, the hash string associated with the commit of interest is `78c929e`. So to revert to that state, type:
 
 ```bash
 $ git checkout 78c929e
 ```
 
-You'll see a message indicating that you are in a `"detached HEAD" state`. This is simply stating that you are no longer viewing the most recent state of your repo.
+You'll see a message indicating that you are in a `"detached HEAD" state`. This is simply stating that if you make changes to this snapshot, they will not automatically be committed to the current branch.
 
-Look at the contents of your project folder.  The `veggies.txt` file is gone. You are now viewing the project folder in its earlier state. But be careful not to make any edits in this snapshot, doing so will force a new branch which is a topic we'll cover later.
+![image-20210531134441426](img_classroom/image-20210531134441426.png)
 
-## Reverting back to the most recent commit
+Look at the contents of your project folder.  The `veggies.txt` file is gone. You are now viewing the project folder in its earlier state (after we added `orange` to the `fruits.txt` file). But be careful not to make any edits in this snapshot, doing so will force a new branch which is a topic we'll cover later.
+
+## Revert back to the most recent commit
 
 Now lets revert back to our most recent snapshot. To do so, we'll need the hash string.
 
@@ -393,8 +393,6 @@ $ git log --oneline
 78c929e (HEAD) addded orange
 246dd78 initial commit
 ```
-
-
 
 Note that all commits  beyond this repo are no longer listed--this includes the most recent state of our repo. To view *all* snapshots, forward and backwards, add the `--all` option.
 
@@ -425,7 +423,7 @@ HEAD detached at c3478ed
 nothing to commit, working tree clean
 ```
 
-The message indicates that there is nothing to commit, but it's also indicating that the `HEAD` is "detached" at the current commit.  This is not a message we would have seen had we not gone through the process of checking out commits. The message is indicating that if we were to make any changes to the current snapshot, those changes would not be associated with the current `main` branch. For now, we can ignore this warning since we have not made any changes and force the `HEAD` back to the `main` branch.
+The message indicates that there is nothing to commit, but it's also indicating that the `HEAD` is still "detached" at the current commit.  This is not a message we would have seen had we not gone through the process of checking out commits. The message is indicating that if we were to make any changes to the current snapshot, those changes would not be associated with the current `main` branch. We'll force the `HEAD` back to the `main` branch.
 
 ```bash
 $ git checkout main
@@ -440,11 +438,11 @@ On branch main
 nothing to commit, working tree clean
 ```
 
-## Creating a new branch
+## Create a new branch: `branch`
 
 So far, we've worked off of a single branch: `main`. Traditionally, this is your *production* branch and it may be the only branch in your repo. But there may be times when you want to create a spinoff of your project. For example, you might want to explore a different analysis technique without impacting the "original" workflow, or you might be collaborating with a co-author whereby she is tasked with tackling a specific part of the project--having her work on a separate branch avoids the risk of her modifying the project's core workflow.  
 
-In this exercise, you will go back the second commit (the one before you created the veggies.txt file) and create a new branch that you'll name `sweets` whereby you will create a desserts.txt file.
+In this exercise, you will go back the second commit (the one before you created the veggies.txt file) and create a new branch that you'll name `sweets`.
 
 ```bash
 $ git checkout 78c929e
@@ -478,6 +476,7 @@ c3478ed (main) added veggies list
 246dd78 initial commit
 ```
 You should now see `HEAD` attached to the new branch named `sweets`.
+
 Next, add a `desserts.txt` file and populate it with the following list of desserts.
 
 ```
@@ -495,7 +494,7 @@ $ git commit -m "added desserts list"
 Now check the log.
 
 ```bash
-$ git commit -mgit log --oneline --all
+$ git log --oneline --all
 ```
 
 ```
@@ -505,10 +504,16 @@ c3478ed (main) added veggies list
 246dd78 initial commit
 ```
 
+
+
+![image-20210531134625852](img_classroom/image-20210531134625852.png)
+
+
+
 Another option that can be added to the log command is `--graph`. This helps visualize where branches spin off of the main branch.
 
 ```bash
-$ git commit -mgit log --oneline --all --graph
+$ git log --oneline --all --graph
 ```
 
 ```
@@ -519,9 +524,9 @@ $ git commit -mgit log --oneline --all --graph
 * 246dd78 initial commit
 ```
 
-## Moving back and forth between branches
+## Move back and forth between branches
 
-You can jump back and forth between branches using the `checkout` command. But first, lets list all available branches in out repo.
+You can jump back and forth between branches using the `checkout` command. But first, let's list all available branches in our repo.
 
 ```bash
 $ git branch
@@ -534,7 +539,7 @@ $ git branch
 
 We currently have two branches: `main` and `sweets`. The asterisk `*` indicates the branch we are currently in.
 
-We can also tell which branch we are in using the `log` command.
+We can also tell which branch we are in via the `log` command.
 
 ```bash
 $ git log --oneline --all
@@ -555,7 +560,7 @@ To jump back to the `main` branch, type:
 $ git checkout main
 ```
 
-Lets check the log.
+Let's check the log.
 
 ```bash
 $ git log --oneline --all
@@ -572,11 +577,11 @@ Head is now pointing to the `main` branch.
 
 At this point, each branch can be worked on without impacting one another.
 
-## Merging branches
+## Merge branches: `merge`
 
 At some point in your project, you might choose to combine changes made in a branch into the `main` (production) branch. This is accomplished using the `merge` command.
 
-The first step is to make sure that you are in the branch you want to merge to (`main` in this working example). We can use the log command or the branch command.
+The first step is to make sure that you are in the branch you want to merge into (`main` in this working example). 
 
 ```bash
 $ git branch
@@ -631,17 +636,21 @@ The output mimics the workflow adopted in this repo (i.e. the creation of a `swe
 
 You'll also note that the merge created a new commit HASH (`27a7bc1` in this working example).
 
-At this point, your project folder has all three files: `desserts.txt`, `fruits.txt`, and `veggies.txt`.
+![image-20210531135011877](img_classroom/image-20210531135011877.png)
 
-## Overwriting files in a merge
+At this point, your project folder should have all three files: `desserts.txt`, `fruits.txt`, and `veggies.txt`.
 
-The merge performed in the last exercise offered a best case scenario: one that did not involved an overwrite. In other words, we were not overwriting an existing file in `main`. In this exercise, we will create a scenario where the merge will lead to an overwrite.
 
-### Creating a new branch
 
-In this step, you will create a new branch off of the tip of `main` that we'll call `botanist`. This branch will modify both the `fruits.txt` and `veggies.txt` files by moving the `tomato` item from one to the other (this to satisfy a botanist's view of a tomato).
+## Overwrite files in a merge
 
-You will first create a new branch that you will name `botanist` (make sure that you are doing this at the tip of the `main` branch). This time, you will use the `branch` command to create this new branch.
+The merge performed in the last exercise offered a best case scenario: one that did not involve an overwrite. In other words, we were not overwriting an existing file in `main`. In this next exercise, we will create a scenario where the merge will lead to an overwrite.
+
+### Create a new branch
+
+In this step, we will create a new branch off of the tip of `main` that we'll call `botanist`. This branch will modify both the `fruits.txt` and `veggies.txt` files by moving the `tomato` item from one to the other (this to satisfy a botanist's view of a tomato).
+
+We will first create a new branch that we'll name `botanist` (make sure that you are doing this at the tip of the `main` branch). This time, we will use the `branch` command to create this new branch.
 
 ```bash
 $ git branch botanist
@@ -651,9 +660,9 @@ $ git branch botanist
 $ git checkout botanist
 ```
 
-Now that you are in the botanist branch, add `tomato` to the fruits.txt file and remove that entry from the veggies.txt file.
+Now that we are in the `botanist` branch, add `tomato` to the `fruits.txt` file and remove that entry from the` veggies.txt` file.
 
-fruit.txt:
+`fruit.txt`:
 
 ```
 apple
@@ -662,7 +671,7 @@ orange
 tomato
 ```
 
-veggies.txt:
+`veggies.txt`:
 
 ```
 kale
@@ -691,11 +700,11 @@ c3478ed added veggies list
 246dd78 initial commit
 ```
 
-
+![image-20210531135114771](img_classroom/image-20210531135114771.png)
 
 ### Merge `botanist` into `main`
 
-Next, we'll merge this branch into main. But first, we need to jump back into `main`.
+Next, we'll merge the `botanist` branch into `main`. But first, we need to jump back into `main`.
 
 ```bash
 $ git checkout main
@@ -736,27 +745,31 @@ $ git log --oneline --all --graph
 
 Notice how the `main` branch adopted the same hash id as that of the last commit of the `botanist` branch. This makes sense given that this last `main` snapshot is identical to that of the last commit in `botanist`. 
 
+![image-20210531135218935](img_classroom/image-20210531135218935.png)
+
 ## Merge conflicts
 
 A scenario you might come across is one where the merge will generate a conflict if the `main` branch was modified *after* an alternate branch was spun off of the `main` branch. An example of such a scenario follows.
 
 ### Create a `nutritionist ` branch
 
-From the main branch, create a `nutritionist` branch then jump into that branch.
+From the main branch, create a `nutritionist` branch, then jump into that branch.
 
 ```bash
 $ git branch   nutritionist
 $ git checkout nutritionist
 ```
 
-In this new branch, you will move the `tomato` back to the `veggies.txt` file thus removing it from the `fruits.txt` (nutritionist have no qualms referring tomatoes as veggies). 
+In this new branch, you will move the `tomato` back to the `veggies.txt` file thus removing it from `fruits.txt` (nutritionist have no qualms referring tomatoes as veggies). 
 
 Save the files, then stage and commit the changes.
 
 ```bash
 $ git add fruits.txt veggies.txt
-$ git commit -m "nutritionist take on tomatoes"
+$ git commit -m "nutritionist's take on tomatoes"
 ```
+
+![image-20210531135417567](img_classroom/image-20210531135417567.png)
 
 ### Make changes to `main`
 
@@ -766,7 +779,7 @@ Before merging `nutritionist` into `main`, we will make changes to `main`. Doing
 $ git checkout main
 ```
 
-In `main`, you will modify the `veggies.txt` file by adding a `broccoli` entry. The veggies.txt file should look like this:
+In `main`, you will modify the `veggies.txt` file by adding a `broccoli` entry. The `veggies.txt` file should look like this:
 
 ```
 kale
@@ -787,9 +800,11 @@ Now check the log.
 $ git log --oneline --all --graph
 ```
 
-The branch`main` is now ahead of the `nutritionist` branch. This will create a conflict when merging as will be shown next.
+The branch`main` is now ahead of the `nutritionist` branch. This will create a conflict when merging as will be seen next.
 
-### Merging into a branch that is ahead of a commit
+![image-20210531135457269](img_classroom/image-20210531135457269.png)
+
+### Merge into a branch that is ahead of a commit
 
 While remaining in the `main` branch,  merge `nutritionist`.
 
@@ -803,7 +818,7 @@ CONFLICT (content): Merge conflict in veggies.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-The message indicates that there is a conflict with the veggies.txt file. This is because the `nutritionist ` branch does not have the latest version of  `main`'s  veggies.txt file. This prevented the merge from completing successfully.  However, the message is misleading since it suggests that nothing has changed in `main`. Let's see if this is indeed the case:
+The message indicates that there is a conflict with the `veggies.txt` file. This is because the `nutritionist ` branch does not have the latest version of  `main`'s  `veggies.txt` file. This prevented the merge from completing successfully.  However, the message is misleading since it suggests that nothing has changed in `main`. Let's see if this is indeed the case:
 
 ```bash
 $ git status
@@ -823,9 +838,11 @@ Unmerged paths:
         both modified:   veggies.txt
 ```
 
-Changes *have* been made in `main` as a result of the attempted merge.  It recognizes that `fruits.txt` was modified in `nutritionist`  and is ready to be committed (recall that we did not make any changes to `fruits.txt` in `main` since spinning off the `nutritionist` branch, so Git does not see a conflict). It also recognizes that `veggies.txt` was modified in `nutricitonist` but it also recognizes that it was modified in `main` after we spun off `nutristionist`. Sot it's not sure which version we want to keep. Since Git wants us to conflict before finalizing the merge with a commit.
+![image-20210531135553025](img_classroom/image-20210531135553025.png)
 
-### Fixing merge conflicts
+Changes *have* been made in `main` as a result of the attempted merge.  It recognizes that `fruits.txt` was modified in `nutritionist`  and is ready to be committed (recall that we did not make any changes to `fruits.txt` in `main` since spinning off the `nutritionist` branch, so Git does not see a conflict there). It also recognizes that `veggies.txt` was modified in `nutritionist` but it also recognizes that it was modified in `main` after we spun off `nutritionist`. So it's not sure which version we want to keep. 
+
+### Fix merge conflicts
 
 The message from the `status` output suggests that there is a conflict with `veggies.txt`.  To fix the conflict, we need to open the `veggies.txt` file in an editor. You can use the built-in bash editor, or a GUI editor.
 
@@ -839,7 +856,7 @@ tomato
 >>>>>>> nutritionist 
 ```
 
-There are markers added to the file. They are showing the “before-the-merge” state of the file and the suggested “after-the-merge” fix to the conflict.
+There are markers added to the file. They are showing the competing versions of the file.
 
 Everything between `<<<<<<< HEAD` and  `=======` is what we currently have in `main` which is at the `HEAD` of the commit tree. 
 
@@ -849,7 +866,7 @@ broccoli
 =======
 ```
 
-Everything between `======= ` and  `>>>>>>> nutritionist ` is what we currently have in the`nutritionist` branch.
+Everything between `======= ` and  `>>>>>>> nutritionist ` is what we currently have in the `nutritionist` branch.
 
 ```
 =======
@@ -857,7 +874,9 @@ tomato
 >>>>>>> nutritionist 
 ```
 
-Git is allowing us to make changes to the script to reflect what we want in the final version of the file. We'll choose to keep both edits. So all we need to do is remove the markers as follows:
+![image-20210531140721065](img_classroom/image-20210531140721065.png)
+
+Git is allowing us to make changes to the script to reflect what we want in the final version of the file. We'll choose to keep both edits. So all we need to do is remove the markers and edit the file as follows:
 
 ```
 kale
@@ -866,7 +885,7 @@ broccoli
 tomato
 ```
 
-Next, we need to add `veggies.txt` to the staging area (recall that `fruits.txt` has already been staged for us given that it did not have a conflict), then commit the stages files
+Next, we need to add `veggies.txt` to the staging area (recall that `fruits.txt` has already been staged for us given that it did not have a conflict), then commit the staged file.
 
 ```bash
  $ git add veggies.txt
@@ -876,7 +895,7 @@ Next, we need to add `veggies.txt` to the staging area (recall that `fruits.txt`
 Now check the log.
 
 ```bash
-$ git commit -m "colog --oneline --all --graph
+$ git log --oneline --all --graph
 ```
 
 ```
@@ -895,3 +914,14 @@ $ git commit -m "colog --oneline --all --graph
 * 246dd78 initial commit
 ```
 
+
+
+![image-20210531135655263](img_classroom/image-20210531135655263.png)
+
+This completes this tutorial. [Next, you will learn how to sync a local repo with a GitHub repo.](github_setup)
+
+
+<div class="footer">
+<hr/>
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
+</br>
