@@ -1,9 +1,9 @@
-# Keeping a local repo synced with GitHub
+# Exploring syncing scenarios between local and remote repositories
 
 [TOC]
 ------
 
-In this tutorial you will learn how to keep a local repo synced with its GitHub counterpart. You will work off of the `proj1` repo created an a [previous](github_setup.md) tutorial.
+In this tutorial you will learn how to keep a local repo synced with its GitHub counterpart. You will work off of the `proj2` repo created in a [previous](github_setup.md) tutorial.
 
 ## Check the repo's status
 
@@ -20,7 +20,9 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-The message indicates that there is nothing to commit. It also indicates that it's in sync with with GitHub counterpart via the `Your branch is up to date with 'origin/main'` handle `origin` points to the GitHub repo. To confirm this, simply type:
+The message indicates that there is nothing to commit. It also indicates that it's in sync with with GitHub counterpart via the `Your branch is up to date with 'origin/main'` message. 
+
+Recall that the handle `origin` points to the GitHub repo. To confirm this, simply type:
 
 ```BASH
 git remote -v
@@ -43,7 +45,7 @@ d31354c (HEAD -> main, origin/main, origin/HEAD) Initial commit
 
 It shows an existing commit. This was not created by us in our local repo. It was created by GitHub when we initially setup the repo on the web page. This commit includes the addition of the README file.
 
-The log has a few more elements not present in an earlier tutorial where we were working exclusively in a local git repo. This log adds `origin/main` and `origin/HEAD`. Recall that `origin` is a handle to the remote GitHub repo. `origin/main` is the `main` branch on the remote repo and `origin/HEAD` is the active branch n the remote repo.
+The log has a few more elements not present in an earlier tutorial where we were working exclusively in a local git repo. This log adds `origin/main` and `origin/HEAD`. Recall that `origin` is a handle to the remote GitHub repo. `origin/main` is the `main` branch on the remote repo and `origin/HEAD` is the active branch on the remote repo.
 
 ![image-20210530210309508](img/image-20210530210309508.png)
 
@@ -66,7 +68,7 @@ $ git add fruits.txt
 $ git commit -m "added fruits"
 ```
 
-Now lets check the status:
+Now let's check the status:
 
 ```BASH
 $ git status
@@ -80,7 +82,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 
-The output indicates that all changes in this repo were properly committed, but it also indicates that our local repo is no longer in sync with its GitHub counterpart. It's stating that our local repo is ahead of the remote repo by one commit
+The output indicates that all changes in this repo were properly committed, but it also indicates that our local repo is no longer in sync with its GitHub counterpart. It's stating that our local repo is ahead of the remote repo by one commit.
 
 Another way to view the disconnect between the local an remote repos is to view the log.
 
@@ -107,7 +109,7 @@ To push changes made locally to the remote repo, type:
 $ git push
 ```
 
-Depending on how you have your authentication envrionment setup, you may or may not be prompted for a username/password.
+Depending on how you have your authentication environment setup, you may or may not be prompted for a username/password.
 
 You'll see a status message similar to the following:
 
@@ -152,11 +154,11 @@ You'll note that we did not add a commit. The only thing that has changed is the
 
 A typical workflow involves making changes to a local repo, then pushing that repo to its remote counterpart on a regular basis. In other words, the local repo is more likely to find itself ahead of the remote repo regularly. 
 
-There may be times when the remote repo is ahead of your local repo. This can happen if you are working off of the remote repo from  two different computers. For example, you might have a local copy of the repo in your work office and another local copy in your home office.  You make changes to the local office repo then push it to the remote repo. This will make you home repo behind the remote repo.
+However, there may be times when the remote repo is ahead of your local repo. This can happen if you are working off of the remote repo from  two different computers. For example, you might have a local copy of the repo in your work office and another local copy in your home office.  You make changes to the local office repo then push it to the remote repo. This will set you home repo behind the remote repo.
 
 Another scenario that can cause the remote repo to be ahead of the local repo is one where a collaborator is contributing to the remote repo.
 
-In this example, we'll create a scenario whereby the remote repo will be ahead of the local repo. We'll do this by simply editing a file directly in GitHub.
+In the example that follows, we'll create a scenario where the remote repo will be ahead of the local repo. We'll do this by simply editing a file directly in GitHub.
 
 Go to your GitHub `proj2` repo page . Make sure to refresh the page to see all recent changes made to the repo.
 
@@ -176,7 +178,7 @@ The README file is in a markdown format. Edit the text as follows:
 This is a test repo used to explore different syncing scenarios
 ```
 
-A the bottom of the page, you have the opportunity to add a commit message before commuting the changes. Note that the staging process is taken care of on the GitHub page.
+A the bottom of the page, you have the opportunity to add a commit message before committing the changes. Note that the staging process is taken care of on the GitHub page.
 
 We'll keep the default commit message and click on the `Commit changes` button.
 
@@ -197,7 +199,7 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-The status suggests that everything is up to date. But this is misleading. The `status` function does not actively check the state of the remote repo. We need to sync the remote log with out local repo.
+The status suggests that everything is up to date. But this is misleading. The `status` function does not actively check the state of the remote repo. We need to **sync** the **remote log** with out local repo.
 
 ```BASH
 $ git fetch
@@ -249,9 +251,11 @@ cec3e0a added fruits
 d31354c Initial commit
 ```
 
+Both repos are now in sync.
+
 ## Adding a branch
 
-Let's add a branch called `feedback` to the local repo. We'll check into that branch.
+Let's add a branch called `feedback` to the local repo. 
 
 ```BASH
 $ git branch feedback
@@ -353,13 +357,13 @@ mango
 peach
 ```
 
-At the bottom of the Editor page, type `Added peach` as the commit message then click on **Commit changes**.
+At the bottom of the *Editor* page, type `Added peach` as the commit message then click on **Commit changes**.
 
 ![image-20210530202434264](img/image-20210530202434264.png)
 
 ### Fixing conflict between remote and local repo
 
-We now have separate commits made the local and remote repos. We will first attempt a push from the local repo.
+We now have separate commits made to the local and remote repos. We will first attempt a push from the local repo.
 
 ```BASH
 $ git push
@@ -437,7 +441,7 @@ peach
 >>>>>>> e1ebf63873a5565dab5cda5d1759d210d5a1693f
 ```
 
-Markers were added to the file. They are showing the  state of the file In our current `HEAD` and that in the file in GitHub (note that the log output lists the hash id starting with `e1ebf63` as the commit id associated with`origin/feedback` ).
+Markers were added to the file. They are showing the  state of the file In our current `HEAD` and that in the file on GitHub (note that the log output lists the hash id starting with `e1ebf63` as the commit id associated with`origin/feedback` ).
 
 Everything between `<<<<<<< HEAD` and  `=======` is what we currently have in our local `feedback` branch.  (note that an empty line was added in this example).
 
@@ -457,7 +461,7 @@ peach
 >>>>>>> e1ebf63873a5565dab5cda5d1759d210d5a1693f
 ```
 
-We now need to decide how we want to fix this conflict. We go ahead and remove `mango` and keep the `peach`. The file should look like the following when done (don't forget to remove the markers).
+We now need to decide how we want to fix this conflict. We'll go ahead and remove `mango` and keep the `peach`. The file should look like the following when done (don't forget to remove the markers).
 
 ```
 apple
@@ -557,4 +561,3 @@ All branches, local and remote, should now be in sync.
 <hr/>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
 </br>
-
