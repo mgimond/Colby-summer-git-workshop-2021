@@ -117,6 +117,8 @@ You can switch between branches on GitHub via the **branch** tab.<img src="img/i
 
 You won't see the `.git/` folder on the GitHub repo, that's because GitHub has its own Git system. However, all versions and logs stored in your local `.git/` folder do get synced with the GitHub repo.
 
+This completes this part of the workshop. [Next, you will explore different syncing scenarios between a local repo and a GitHub repo](git_and_github.html).
+
 <div class="footer">
 <hr/>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
