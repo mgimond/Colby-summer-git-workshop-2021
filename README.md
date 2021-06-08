@@ -1,4 +1,7 @@
-# Intro to Git and GitHub
+# Intro to Git and GitHub 
+
+Colby College Workshop, June 2021
+
 
 
 ## Installing Git
@@ -26,13 +29,10 @@ GitHub is a web hosted service  used to store and maintain code based projects. 
 
 ## What will this workshop cover
 
-### Morning session
-
 * [Intro to Git](git.html)
-* [Linking GitHub to  a local repo and vice versa ](github_setup.html)
+* [Setting up an authentication protocol between Git and GitHub](authenticating with github.html)
+* [Linking GitHub to a local repo](github_setup.html)
 * [Exploring syncing scenarios between GitHub and  a local repo ](git_and_github.html)
-
-### Afternoon session
 
 * [GitHub for the Classroom](github_classroom.html)
 
