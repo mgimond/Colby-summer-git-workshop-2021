@@ -29,11 +29,10 @@ GitHub is a web hosted service  used to store and maintain code based projects. 
 
 ## What will this workshop cover
 
-* [Intro to Git](git.html)
-* [Setting up an authentication protocol between Git and GitHub](<authenticating with github.html>)
-* [Linking GitHub to a local repo](github_setup.html)
-* [Exploring syncing scenarios between GitHub and  a local repo ](git_and_github.html)
-
+* [Intro to Git](https://mgimond.github.io/Colby-summer-git-workshop-2021/git.html)
+* [Setting up an authentication protocol between Git and GitHub](<https://mgimond.github.io/Colby-summer-git-workshop-2021/authenticating with github.html>)
+* [Linking GitHub to a local repo](https://mgimond.github.io/Colby-summer-git-workshop-2021/github_setup.html)
+* [Exploring syncing scenarios between GitHub and  a local repo ](https://mgimond.github.io/Colby-summer-git-workshop-2021/git_and_github.html)
 * [GitHub for the Classroom](github_classroom.html)
 
 <div class="footer">
