@@ -33,10 +33,10 @@ GitHub is a web hosted service  used to store and maintain code based projects. 
 * [Setting up an authentication protocol between Git and GitHub](authenticating with github.html)
 * [Linking GitHub to a local repo](github_setup.html)
 * [Exploring syncing scenarios between GitHub and  a local repo ](git_and_github.html)
-
 * [GitHub for the Classroom](github_classroom.html)
 
 <div class="footer">
 <hr/>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
 </br>
+
