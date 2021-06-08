@@ -920,6 +920,9 @@ $ git log --oneline --all --graph
 
 This completes this tutorial. [Next, you will learn how to sync a local repo with a GitHub repo.](github_setup)
 
+-----
+
+[Back to the home page](index.html)
 
 <div class="footer">
 <hr/>

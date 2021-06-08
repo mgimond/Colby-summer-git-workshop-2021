@@ -198,6 +198,9 @@ In addition to providing the students with the group assignment link, you will n
 
     The next step is to accept the assignment in which case the student is assigned co-authorship of the repo.
 
+-----
+
+[Back to the home page](index.html)
 
 <div class="footer">
 <hr/>

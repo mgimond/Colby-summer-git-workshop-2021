@@ -2,7 +2,15 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<style>
+.OS {
+  margin-left: 3em;
+}
 
+.md-toc-h1 {
+  display: none;
+}
+</style>
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
@@ -218,6 +226,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 }
 
 @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
 
 /* open-sans-regular - latin-ext_latin */
   /* open-sans-italic - latin-ext_latin */
@@ -532,6 +541,11 @@ code {
     padding-bottom:20px;
 }
 
+.md-toc-h1 {
+  display: none;
+}
+
+
 .sidebar-tabs {
     border-bottom: none;
 }
@@ -598,16 +612,14 @@ header, .context-menu, .megamenu-content, footer{
     background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
 }
 
+
 .md-toc-h1 {
   display: none;
-}
-
-
-
-</style><title>README</title>
+} :root {--mermaid-font-zoom:1.5em ;} 
+</style><title>index</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='intro-to-git-and-github'><span>Intro to Git and GitHub</span></h1><h2 id='installing-git'><span>Installing Git</span></h2><ul><li><span>For </span><strong><span>Windows</span></strong><span>, Git can be installed from </span><a href='https://gitforwindows.org/' target='_blank' class='url'>https://gitforwindows.org/</a><span>. Go with the default installation  options. </span></li><li><span>For </span><strong><span>Macs</span></strong><span>, Git can be installed from  </span><a href='http://git-scm.com/downloads' target='_blank' class='url'>http://git-scm.com/downloads</a><span>. Go with the default installation options. </span></li></ul><blockquote><p><span>Note 1: The  installers may install both a GUI and a Bash Git environment. This workshop will work exclusively in the Bash environment.</span></p></blockquote><blockquote><p><span>Note 2: Some students have experienced issues installing Git on their Macs. A workaround that seems to work can be found </span><a href='git_mac_issue.md'><span>here</span></a><span>.</span></p></blockquote><h2 id='creating-a-github-account'><span>Creating a GitHub account</span></h2><p><span>If you do not have a GitHub account already created, do so by pointing your browser to </span><a href='https://github.com/' target='_blank' class='url'>https://github.com/</a><span>. Note that there are different plans to choose from. You will select the free version.</span></p><h2 id='what-is-git'><span>What is Git</span></h2><p><span>Git is a locally installed application used to keep track of changes made to a project folder. In its simplest form,  it allows you to create snapshots of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called </span><em><span>branches</span></em><span>) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called </span><em><span>version control systems</span></em><span>.</span></p><p><span>Git is available in both a GUI and a command line environment.</span></p><h2 id='what-is-github'><span>What is GitHub</span></h2><p><span>GitHub is a web hosted service  used to store and maintain code based projects. While it&#39;s a completely separate environment from Git (Git and GitHub are developed and maintained by separate entities), they are often used together in a typical workflow: You use git on your computer to track changes in a project folder, then use GitHub to host and share you project across the web.</span></p><h2 id='what-will-this-workshop-cover'><span>What will this workshop cover</span></h2><h3 id='morning-session'><span>Morning session</span></h3><ul><li><a href='git.html'><span>Intro to Git</span></a></li><li><a href='github_setup.html'><span>Linking GitHub to  a local repo and vice versa </span></a></li><li><a href='git_and_github.html'><span>Exploring syncing scenarios between GitHub and  a local repo </span></a></li></ul><h3 id='afternoon-session'><span>Afternoon session</span></h3><ul><li><a href='github_classroom.html'><span>GitHub for the Classroom</span></a></li></ul><div class="footer">
+<div id='write'  class=''><h1 id='intro-to-git-and-github'><span>Intro to Git and GitHub </span></h1><p><span style="color:#aaaaaa; font-size: 1.2em;"><span> Colby College Workshop, June 2021  </span></span></p><p>&nbsp;</p><h2 id='installing-git'><span>Installing Git</span></h2><ul><li><span>For </span><strong><span>Windows</span></strong><span>, Git can be installed from </span><a href='https://gitforwindows.org/' target='_blank' class='url'>https://gitforwindows.org/</a><span>. Go with the default installation  options. </span></li><li><span>For </span><strong><span>Macs</span></strong><span>, Git can be installed from  </span><a href='http://git-scm.com/downloads' target='_blank' class='url'>http://git-scm.com/downloads</a><span>. Go with the default installation options. </span></li></ul><blockquote><p><span>Note 1: The  installers may install both a GUI and a Bash Git environment. This workshop will work exclusively in the Bash environment.</span></p></blockquote><blockquote><p><span>Note 2: Some students have experienced issues installing Git on their Macs. A workaround that seems to work can be found </span><a href='git_mac_issue.md'><span>here</span></a><span>.</span></p></blockquote><h2 id='creating-a-github-account'><span>Creating a GitHub account</span></h2><p><span>If you do not have a GitHub account already created, do so by pointing your browser to </span><a href='https://github.com/' target='_blank' class='url'>https://github.com/</a><span>. Note that there are different plans to choose from. You will select the free version.</span></p><h2 id='what-is-git'><span>What is Git</span></h2><p><span>Git is a locally installed application used to keep track of changes made to a project folder. In its simplest form,  it allows you to create snapshots of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called </span><em><span>branches</span></em><span>) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called </span><em><span>version control systems</span></em><span>.</span></p><p><span>Git is available in both a GUI and a command line environment.</span></p><h2 id='what-is-github'><span>What is GitHub</span></h2><p><span>GitHub is a web hosted service  used to store and maintain code based projects. While it&#39;s a completely separate environment from Git (Git and GitHub are developed and maintained by separate entities), they are often used together in a typical workflow: You use git on your computer to track changes in a project folder, then use GitHub to host and share you project across the web.</span></p><h2 id='what-will-this-workshop-cover'><span>What will this workshop cover</span></h2><ul><li><a href='git.html'><span>Intro to Git</span></a></li><li><a href='authenticating with github.html'><span>Setting up an authentication protocol between Git and GitHub</span></a></li><li><a href='github_setup.html'><span>Linking GitHub to a local repo</span></a></li><li><a href='git_and_github.html'><span>Exploring syncing scenarios between GitHub and  a local repo </span></a></li></ul><ul><li><a href='github_classroom.html'><span>GitHub for the Classroom</span></a></li></ul><div class="footer">
 <hr>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"></a>  Manny Gimond (2021)
 <br></div><p>&nbsp;</p></div></div>

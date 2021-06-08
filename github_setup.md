@@ -40,9 +40,7 @@ The next step is to clone your GitHub repo onto your personal computer. The act 
   
   `git clone https://github.com/jdcolby/proj2.git`
   
-  At this point you will be presented with a few login options depending on the OS and git version being used. For example, on Windows using  Git version `2.31.1` you will have the option to authenticate using a token or a *GitCredentialManager*. 
-
-> NOTE: As of August 2021, GitHub will no longer allow account password authentication when accessing a GitHub account using Git. Instead, you will be required to use personal access token or SSH based authentication. This page will be updated later this summer with token based instructions for connecting to GitHub with Git.
+  At this point you may or may not be presented with login credentials depending on how you [setup the authentication protocol](authenticating with github.html).
 
 At this point, you should have a complete copy of the GitHub repo as a new folder. Note that you are not automatically placed into the new folder. Running `ls -aF` should show the `proj2` folder.
 
@@ -105,11 +103,9 @@ $ git push origin main
 
 To push *all* local branches to GitHub, type:
 
-```BASH
+```shell
 $ git push origin --all
 ```
-
-Note that if you do not have a personal access token setup on your local computer, you might be prompted  for a username and password (this option will only be available until August 2021).
 
 **Refresh** your GitHub `proj1`  repo. It should now be populated with all the files and folders present in your local repo.
 
@@ -118,6 +114,14 @@ You can switch between branches on GitHub via the **branch** tab.<img src="img/i
 You won't see the `.git/` folder on the GitHub repo, that's because GitHub has its own Git system. However, all versions and logs stored in your local `.git/` folder do get synced with the GitHub repo.
 
 This completes this part of the workshop. [Next, you will explore different syncing scenarios between a local repo and a GitHub repo](git_and_github.html).
+
+
+
+
+
+-----
+
+[Back to the home page](index.html)
 
 <div class="footer">
 <hr/>

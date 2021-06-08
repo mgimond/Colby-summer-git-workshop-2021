@@ -109,7 +109,7 @@ To push changes made locally to the remote repo, type:
 $ git push
 ```
 
-Depending on how you have your authentication environment setup, you may or may not be prompted for a username/password.
+Depending on how you have your authentication environment setup, you may or may not be prompted for a username/passphrase.
 
 You'll see a status message similar to the following:
 
@@ -557,7 +557,12 @@ $ git push
 
 All branches, local and remote, should now be in sync.
 
+-----
+
+[Back to the home page](index.html)
+
 <div class="footer">
 <hr/>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
 </br>
+
