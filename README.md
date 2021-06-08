@@ -1,6 +1,6 @@
 # Intro to Git and GitHub 
 
-Colby College Workshop, June 2021
+<span style="color:#aaaaaa; font-size: 1.2em;"> Colby College Workshop, June 2021  </span>
 
 
 
@@ -15,11 +15,11 @@ Colby College Workshop, June 2021
 
 ## Creating a GitHub account
 
-If you do not have a GitHub account already created, do so by pointing your browser to https://github.com/. Note that there are different plans to choose from. You will select the free version.
+If you do not have a GitHub account already created, create one by pointing your browser to https://github.com/. Note that there are different plans to choose from. Select the free version.
 
 ## What is Git
 
-Git is a locally installed application used to keep track of changes made to a project folder. In its simplest form,  it allows you to create snapshots of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called *branches*) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called *version control systems*.
+Git is a locally installed application used to keep track of changes made to a project folder. In its simplest use,  it allows you to create snapshots of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called *branches*) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called *version control systems*.
 
 Git is available in both a GUI and a command line environment.
 
