@@ -15,11 +15,11 @@
 
 ## Creating a GitHub account
 
-If you do not have a GitHub account already created, do so by pointing your browser to https://github.com/. Note that there are different plans to choose from. You will select the free version.
+If you do not have a GitHub account already created, create one by pointing your browser to https://github.com/. Note that there are different plans to choose from. Select the free version.
 
 ## What is Git
 
-Git is a locally installed application used to keep track of changes made to a project folder. In its simplest form,  it allows you to create snapshots of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called *branches*) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called *version control systems*.
+Git is a locally installed application used to keep track of changes made to a project folder. In its simplest use,  it allows you to create snapshots of a project folder that you can revert to at anytime in your workflow. In its advanced use, it can create simultaneous versions of a project folder (called *branches*) whereby you chose to explore what/if scenarios in an analysis. You can also assign different authors to different branches with each branch tackling a specific task.  Git is part of a family of software applications called *version control systems*.
 
 Git is available in both a GUI and a command line environment.
 
@@ -39,4 +39,3 @@ GitHub is a web hosted service  used to store and maintain code based projects. 
 <hr/>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
 </br>
-
