@@ -41,6 +41,22 @@ We will also take the opportunity to  change the default name of the main branch
 $ git config --global init.defaultBranch main
 ```
 
+Another configuration option that you might want to enable if your project repository will be worked on both a Windows and Unix based environment like Linux or Mac OS is `core.autocrlf`. This will prevent conflicts in how the different operating systems denote the end of a line. 
+
+On a Windows environment, you can set the option to `true` as in:
+
+```shell
+$ git config --global core.autocrlf true
+```
+
+On a Linux or Mac OS environment, set the option to `input` as in:
+
+```shell
+$ git config --global core.autocrlf input
+```
+
+Basically, Windows uses a carriage return *and* a line feed, `CRLF`, to denote an end of line while the Unix based environments only use line feeds,` LF`.  The above options will ensure that `CRLF` will be replaced with `LF`.  
+
 ## Create a new project folder
 
 A Git repository (**repo**  for short) usually consists of project folder. You can create a Git repo in an existing project folder, or from a newly created folder. In this exercise, you'll create a new empty folder that you'll call `proj1`.  You can do this in a file manager window, or via the Bash command line. In this working example, we'll use Bash to create the folder under the user's home directory.
@@ -928,3 +944,4 @@ This completes this tutorial. [Next, you will learn how to sync a local repo wit
 <hr/>
 <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>  Manny Gimond (2021)
 </br>
+
