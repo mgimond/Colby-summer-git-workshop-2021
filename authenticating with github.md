@@ -50,7 +50,7 @@ First, you need to follow these steps on GitHub:
 
 6. From the **scopes** menu, select *repo*. This will allow you to read/write to your repo.
 
-   ![image-20210607100556823](img/image-20210607100556823.png)
+   ![image-20210607100556823](img_auth/image-20210607100556823.png)
 
 7. Click **Generate token** at the bottom of the page.
 
@@ -58,7 +58,7 @@ First, you need to follow these steps on GitHub:
 
    
 
-   ![image-20210607100655111](img/image-20210607100655111.png)
+   ![image-20210607100655111](img_auth/image-20210607100655111.png)
 
    When copying the token id, be careful not to add any empty spaces to the beginning or end of the token. It might be a good idea to temporarily paste the token into a plain text editor.
 
