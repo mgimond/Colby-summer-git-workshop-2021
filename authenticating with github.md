@@ -1,6 +1,9 @@
-# Authenticating with GitHub
-
-[TOC]
+---
+title: "Authenticating with GitHub"
+output: 
+  html_document:
+    toc: true
+---
 
 ------
 
@@ -28,10 +31,7 @@ If `jdcolby` clones that same `repo1` repository from her GitHub account using `
 $ git clone git@github.com:jdcolby/repo1.git
 ```
 
-
-
 Instructions on setting up authentication using both techniques follow.
-
 
 
 ## Personal access token (PAT) based authentication
@@ -40,27 +40,28 @@ First, you need to follow these steps on GitHub:
 
 1. Click on your avatar (upper right-hand corner) and select **Settings**.
 
-2. On the left sidebar, click on **Developer** **settings**.
+2. On the left sidebar, click on **Developer** **settings** (this should be near the bottom of the left sidebar.
 
 3. In the left sidebar, click **Personal access tokens**.
 
-4. Click **Generate new token**. 
+4. Click **Generate new token** (button near the upper left-hand side).
    
 5. In the *Note* field, assign a name to this token such as the local computer you are creating this token for.
 
-6. From the **scopes** menu, select *repo*. This will allow you to read/write to your repo.
+6. In the next field, you can set an expiration date for this token, or make it permanent. In this example, we'll set it for 90 days.
 
-   ![image-20210607100556823](img_auth/image-20210607100556823.png)
+7. From the **scopes** menu, select *repo*. This will allow you to read/write to your repo.
+
+<img src="img_auth/image-20210607100556823.png" alt="image-20210607100556823" style="zoom:50%;" />
+
 
 7. Click **Generate token** at the bottom of the page.
 
 8. **Copy** and **temporarily save** the token before closing the window. 
 
+<img src="img_auth/image-20210607100655111.png" alt="image-20210607100655111" style="zoom:50%;" />
    
-
-   ![image-20210607100655111](img_auth/image-20210607100655111.png)
-
-   When copying the token id, be careful not to add any empty spaces to the beginning or end of the token. It might be a good idea to temporarily paste the token into a plain text editor.
+    When copying the token id, be careful not to add any empty spaces to the beginning or end of the token. It might be a good idea to temporarily paste the token into a plain text editor.
 
    > Note that you will not be able to access the token string once you exit the window! You might want to keep this window open until you've completed the steps outlined next.
 
@@ -78,12 +79,12 @@ Pasting your token each time you push or pull from your repo may prove cumbersom
 
 
 
-#### Windows
+### Windows
 
 If you are using a Windows based Git application, you might see the following window pop-up when you are first asked to enter your token.
 
 
-<img src="img_auth/image-20210607102050270.png" alt="image-20210607102050270" style="zoom:33%;" />
+<img src="img_auth/image-20210607102050270.png" alt="image-20210607102050270" style="zoom:43%;" />
 
 If so, you can paste the token into the *Personal Access Token* field.
 
@@ -102,7 +103,7 @@ The credentials get stored in Windows' **Credential Manager**. You can delete th
 
 
 
-#### Mac
+### Mac
 
 You'll need the **OSX keychain credential helper**.  If you installed Git using Homebrew or via the *Xcode* command line, then *osxkeychain* helper should be part of the installation.
 
@@ -124,7 +125,7 @@ Click [here](https://docs.github.com/en/github/getting-started-with-github/getti
 
 
 
-#### Linux
+### Linux
 
 To temporarily cache the token on Linux, use the following command:
 
