@@ -3,6 +3,7 @@ title: "Authenticating with GitHub"
 output: 
   html_document:
     toc: true
+    css: lib/style.css
 ---
 
 ------
@@ -61,11 +62,11 @@ First, you need to follow these steps on GitHub:
 
 <img src="img_auth/image-20210607100655111.png" alt="image-20210607100655111" style="zoom:50%;" />
    
-    When copying the token id, be careful not to add any empty spaces to the beginning or end of the token. It might be a good idea to temporarily paste the token into a plain text editor.
+When copying the token id, be careful not to add any empty spaces to the beginning or end of the token. It might be a good idea to temporarily paste the token into a plain text editor.
 
    > Note that you will not be able to access the token string once you exit the window! You might want to keep this window open until you've completed the steps outlined next.
 
-Once you've created your token on GitHub, you simply substitute your GitHub password with your access token.
+Once you've created your token on GitHub, you simply substitute your GitHub password with your access token. For example, if you are cloning a private repo that your account has access to, you would enter the above token instead of your GitHub password.
 
 ```
 $ git clone https://github.com/jdcolby/repo.git
@@ -75,14 +76,11 @@ Password: <your token>
 
 When you paste your token, you will not see it displayed on the command line. This might lead you to believe that it did not paste. Do not attempt a re-paste since this will only add the token to the end of the already pasted token.
 
-Pasting your token each time you push or pull from your repo may prove cumbersome after a while. It might therefore be best to cache your token.
+Pasting your token each time you push or pull from your repo may prove cumbersome after a while. It might therefore be best to cache your token. This step is OS specific and is highlighted in the next subsections.
 
-
-
-### Windows
+### Saving tokens in Windows
 
 If you are using a Windows based Git application, you might see the following window pop-up when you are first asked to enter your token.
-
 
 <img src="img_auth/image-20210607102050270.png" alt="image-20210607102050270" style="zoom:43%;" />
 
@@ -103,7 +101,7 @@ The credentials get stored in Windows' **Credential Manager**. You can delete th
 
 
 
-### Mac
+### Saving tokens in Mac
 
 You'll need the **OSX keychain credential helper**.  If you installed Git using Homebrew or via the *Xcode* command line, then *osxkeychain* helper should be part of the installation.
 
@@ -124,8 +122,7 @@ The next time you are prompted for a user name and password, simply type your Gi
 Click [here](https://docs.github.com/en/github/getting-started-with-github/getting-started-with-git/updating-credentials-from-the-macos-keychain) to for more information on using *Keychain* with Git.
 
 
-
-### Linux
+### Saving tokens in Linux
 
 To temporarily cache the token on Linux, use the following command:
 
@@ -146,8 +143,6 @@ $ git config credential.helper store
 ```
 
 The next time you are prompted for your GitHub user name and token, the information will be stored permanently in a `.git-credentials` file under your `home` folder. Note, however, that this file is **not encrypted**. For a more secure permanent solution, you might want to check the *SSH based authentication* option.
-
-
 
 ## SSH based authentication
 
